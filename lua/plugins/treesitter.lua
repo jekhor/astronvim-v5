@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Treesitter
 -- --------------------
 -- Treesitter customizations are handled with AstroCore
@@ -12,7 +10,7 @@ return {
   opts = {
     treesitter = {
       highlight = true, -- enable/disable treesitter based highlighting
-      indent = true, -- enable/disable treesitter based indentation
+      indent = false, -- enable/disable treesitter based indentation
       auto_install = true, -- enable/disable automatic installation of detected languages
       ensure_installed = {
         "lua",
