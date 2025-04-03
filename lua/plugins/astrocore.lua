@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -23,28 +21,20 @@ return {
     diagnostics = {
       virtual_text = true,
       underline = true,
-    },
-    -- passed to `vim.filetype.add`
-    filetypes = {
-      -- see `:h vim.filetype.add` for usage
-      extension = {
-        foo = "fooscript",
-      },
-      filename = {
-        [".foorc"] = "fooscript",
-      },
-      pattern = {
-        [".*/etc/foo/.*"] = "fooscript",
-      },
+      update_in_insert = false,
     },
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
-        relativenumber = true, -- sets vim.opt.relativenumber
+        relativenumber = false, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        expandtab = false, -- disable the use of space in tab
+        shiftwidth = 8, -- number of space inserted for indentation
+        showmode = true, -- enable showing modes in command line
+        tabstop = 8, -- number of space in a tab
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -75,7 +65,8 @@ return {
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
-        -- ["<Leader>b"] = { desc = "Buffers" },
+        ["<C-Left>"] = false,
+        ["<C-Right>"] = false,
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
