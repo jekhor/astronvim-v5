@@ -48,8 +48,8 @@ return {
       astrodark = {
         ui = {
           tool = "#1a1a1a",
-          base = "#212121",
-          inactive_base = "#1a1a1a",
+          base = "#1a1a1a",
+          inactive_base = "#212121",
           text = "#e5e5e5",
           text_active = "#e8e8e8",
           text_inactive = "#9c9c9c",
