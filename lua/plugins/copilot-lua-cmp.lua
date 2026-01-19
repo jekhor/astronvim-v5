@@ -6,6 +6,7 @@ return {
         enabled = true,
         auto_trigger = false,
         keymap = {
+          dismiss = "<C-->"
         }
       }
     })

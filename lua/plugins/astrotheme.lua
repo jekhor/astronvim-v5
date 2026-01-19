@@ -6,7 +6,7 @@ return {
 
     style = {
       transparent = false,         -- Bool value, toggles transparency.
-      inactive = true,             -- Bool value, toggles inactive window color.
+      inactive = false,             -- Bool value, toggles inactive window color.
       float = true,                -- Bool value, toggles floating windows background colors.
       neotree = true,              -- Bool value, toggles neo-trees background color.
       border = true,               -- Bool value, toggles borders.

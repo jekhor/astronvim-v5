@@ -25,11 +25,15 @@ end
 
 require "lazy_setup"
 
-vim.api.nvim_set_keymap("c", "<Up>", 'wildmenumode() ? "<Left>" : "<Up>"', { expr = true, noremap = true })
-vim.api.nvim_set_keymap("c", "<Down>", 'wildmenumode() ? "<Right>" : "<Down>"', { expr = true, noremap = true })
-vim.api.nvim_set_keymap("c", "<Left>", 'wildmenumode() ? "<Up>" : "<Left>"', { expr = true, noremap = true })
-vim.api.nvim_set_keymap("c", "<Right>", 'wildmenumode() ? "<Down>" : "<Right>"', { expr = true, noremap = true })
+-- vim.api.nvim_set_keymap("c", "<Up>", 'wildmenumode() ? "<Left>" : "<Up>"', { expr = true, noremap = true })
+-- vim.api.nvim_set_keymap("c", "<Down>", 'wildmenumode() ? "<Right>" : "<Down>"', { expr = true, noremap = true })
+-- vim.api.nvim_set_keymap("c", "<Left>", 'wildmenumode() ? "<Up>" : "<Left>"', { expr = true, noremap = true })
+-- vim.-api.nvim_set_keymap("c", "<Right>", 'wildmenumode() ? "<Down>" : "<Right>"', { expr = true, noremap = true })
 vim.opt.colorcolumn = "81"
 vim.cmd "source ~/.config/nvim/legacy.vim"
+-- vim.keymap.set("n", "<C-]>", "<C-]>", { noremap = true })
+
+vim.g.show_spaces_that_precede_tabs = 1
+
 
 require "polish"
