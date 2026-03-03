@@ -88,7 +88,7 @@ return {
           hl.Keyword.fg = "darkkhaki"
           hl.Include.fg = "indianred"
           hl.Macro.fg = "indianred"
-          hl.Function.fg = c.syntax.text
+--          hl.Function.fg = c.syntax.text
           hl.Structure.fg = "darkkhaki"
           hl.Label.fg = c.syntax.text
           hl.Operator.fg = c.syntax.text
@@ -105,6 +105,8 @@ return {
         ["cLabel"] = { fg = "khaki" },
         ["CopilotSuggestion"] = { fg = "#7f7f7f" },
         ["CopilotAnnotation"] = { fg = "#7f7f7f" },
+        ["mailQuoted1"] = { fg = "PaleGreen3" },
+        ["mailQuoted2"] = { fg = "Aquamarine3" },
       },
     },
 
