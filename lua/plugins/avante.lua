@@ -14,25 +14,21 @@ return {
     -- this file can contain specific instructions for your project
     instructions_file = "avante.md",
     -- for example
-    provider = "claude",
+    provider = "llamacpp",
     providers = {
-      claude = {
-        endpoint = "https://api.anthropic.com",
-        model = "claude-sonnet-4-20250514",
-        timeout = 30000, -- Timeout in milliseconds
-          extra_request_body = {
-            temperature = 0.75,
-            max_tokens = 20480,
-          },
+      llamacpp = {
+        __inherited_from = "openai",
+        endpoint = "http://127.0.0.1:11435",
+        model = "Qwen3-Coder-Next",
+        api_key_name = "cmd:echo nokey"
       },
-      moonshot = {
-        endpoint = "https://api.moonshot.ai/v1",
-        model = "kimi-k2-0711-preview",
-        timeout = 30000, -- Timeout in milliseconds
-        extra_request_body = {
-          temperature = 0.75,
-          max_tokens = 32768,
-        },
+    },
+    shorcuts = {
+      {
+        name = "g",
+        description = "Fix grammar",
+        details = "Fix grammar in selected lines",
+        prompt = "Fix grammar",
       },
     },
   },
